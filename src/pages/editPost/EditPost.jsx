@@ -18,7 +18,7 @@ const EditPost = () => {
     const [oldImage, setOldImage] = useState(null)
 
     useEffect(() => {
-        fetch(`http://localhost:8080/api/post/${id}`)
+        fetch(`https://blogify-backend-steel.vercel.app/api/post/${id}`)
             .then(response => {
                 if(!response.ok) { setRedirectHome(true) }
                 else return response.json()
@@ -42,7 +42,7 @@ const EditPost = () => {
         
         evt.preventDefault()
         
-        const response = await fetch(`http://localhost:8080/api/post/${id}`, {
+        const response = await fetch(`https://blogify-backend-steel.vercel.app/api/post/${id}`, {
             method: 'PUT',
             body: formData,
             credentials: 'include'

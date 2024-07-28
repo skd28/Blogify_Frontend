@@ -20,7 +20,7 @@ const PostPage = () => {
     const CSS_Override = { margin: "8rem auto" }
 
     useEffect(() => {
-        fetch(`http://localhost:8080/api/post/${id}`)
+        fetch(`https://blogify-backend-steel.vercel.app/api/post/${id}`)
             .then((response) => {
                 if(!response.ok) { setRedirectHome(true) }
                 else return response.json()
@@ -32,7 +32,7 @@ const PostPage = () => {
     }, [])
 
     const DeletePost = () => {
-        fetch(`http://localhost:8080/api/post/${id}`, { method: 'DELETE' })
+        fetch(`https://blogify-backend-steel.vercel.app/api/post/${id}`, { method: 'DELETE' })
             .then((response) => {
                 if(response.ok)  setRedirectHome(true)
             })

@@ -20,6 +20,7 @@ const CreatePost = () => {
     if(!userInfo)   {
         return <Navigate to={'/login'}/>
     }
+    //cre
 
     const CreatePost = async (evt) => {
         
@@ -31,7 +32,7 @@ const CreatePost = () => {
         
         evt.preventDefault()
         
-        const response = await fetch('http://localhost:8080/api/post', {
+        const response = await fetch('https://blogify-backend-steel.vercel.app/api/post', {
             method: 'POST',
             body: formData,
             credentials: 'include'

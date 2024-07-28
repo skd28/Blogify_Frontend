@@ -9,7 +9,7 @@ const Home = () => {
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        fetch('http://localhost:8080/api/post')
+        fetch('https://blogify-backend-steel.vercel.app/api/post')
             .then(response => response.json())
             .then(posts => {
                 setPosts(posts)
