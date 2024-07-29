@@ -12,6 +12,7 @@ const RegisterPage = () => {
         evt.preventDefault()
         const response = await fetch('https://blogify-backend-steel.vercel.app/api/register', {
             method: 'POST',
+            mode: 'no-cors',
             body: JSON.stringify({username, password}),
             headers: {'content-Type': 'application/json'}
         })

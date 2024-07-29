@@ -15,6 +15,7 @@ const LoginPage = () => {
         evt.preventDefault()
         const response = await fetch('https://blogify-backend-steel.vercel.app/api/login', {
             method: 'POST',
+            mode: 'no-cors',
             body: JSON.stringify({username, password}),
             headers: {'content-type': 'application/json'},
             credentials: 'include'
